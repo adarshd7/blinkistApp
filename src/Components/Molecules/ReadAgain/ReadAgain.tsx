@@ -1,23 +1,43 @@
 import { Button } from "@mui/material";
-interface propTypes {
-  handleClick: (item: any) => void;
-  id: string;
-}
+import axios from "axios";
+type propTypes = {
+   id:number
 
-export const ReadAgain = (props: propTypes) => (
-  <Button
-    variant="text"
-    sx={{
+ }
+ 
+ const ReadAgain = (props:propTypes) => {
+    
+
+  function addToCurrent(){
+        axios.get(`http://localhost:3001/finishedbooks/${props.id}`)
+        .then(response=>{
+          if(response.status===200){
+            response.data["Finished"]=false;
+            console.log(response.data);
+            axios.post(`http://localhost:3001/books/`,response.data);
+            axios.delete(`http://localhost:3001/finishedbooks/${props.id}`)
+          }
+        });
+  }
+
+
+  return(
+
+  <Button variant="text" sx={{
       width: "100%",
       textTransform: "none",
       fontWeight: 500,
       fontSize: "16px",
       lineHeight: "20px",
       color: "#0365F2",
+
     }}
-    id={props.id}
-    onClick={() => props.handleClick(props.id)}
+    onClick={addToCurrent}
   >
-    Read Again
+    ReadAgain
   </Button>
 );
+  }
+ 
+
+export default ReadAgain;
