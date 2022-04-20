@@ -8,15 +8,16 @@ type propTypes = {
  const ReadAgain = (props:propTypes) => {
     
 
-  function addToCurrent(){
-        axios.get(`http://localhost:3001/finishedbooks/${props.id}`)
-        .then(response=>{
-          if(response.status===200){
-            response.data["Finished"]=false;
+   async function addToCurrent(){
+       await axios.get(`http://localhost:3001/finishedbooks/${props.id}`)
+        .then(async response=>{
+          
+            response.data["finished"]=false;
             console.log(response.data);
-            axios.post(`http://localhost:3001/books/`,response.data);
-            axios.delete(`http://localhost:3001/finishedbooks/${props.id}`)
-          }
+        await    axios.delete(`http://localhost:3001/finishedbooks/${props.id}`);
+        await    axios.post(`http://localhost:3001/books/`,response.data);
+        
+          
         });
   }
 

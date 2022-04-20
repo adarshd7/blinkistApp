@@ -1,13 +1,25 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
+import Icon from "../../Atoms/Icon/Icon";
+import { ReactComponent as Heal} from '../../../assessts/Health.svg';
 
+
+// const iconlist=[{
+//   name:"entrepre",
+//   icons:<Icon icon={Heal}/>
+// },
+// {
+//   name:"entrepre",
+//   icons:<Icon icon={Heal}/>
+// }
+// ]
 const ExploreHeader = () => {
   return (
     <div>
       <Grid
         container
         sx={{
-          paddingTop: "30px",
+          //paddingTop: "30px",
           paddingBottom: "24px",
           width: "1000px",
           marginLeft: "450px",
@@ -52,3 +64,8 @@ const ExploreHeader = () => {
 };
 
 export default ExploreHeader;
+// iconslist.map(e=>{
+//   <Grid>
+//     {e.names} {e.icons}
+//   </Grid>
+// })

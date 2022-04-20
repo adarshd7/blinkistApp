@@ -7,19 +7,20 @@ type propTypes = {
  }
  
  const Finished = (props:propTypes) => {
-      const {id} = props
-
-  function addToFinished(){
-        axios.get(`http://localhost:3001/books/${id}`)
-        .then(response=>{
-          if(response.status===200){
-            response.data["Finished"]=true;
+      
+ async function addToFinished(){
+      await  axios.get(`http://localhost:3001/books/${props.id}`)
+        .then(async response=>{
+          
+            response.data["finished"]=true;
             console.log(response.data);
-            axios.delete(`http://localhost:3001/books/${id}`)
-            axios.post(`http://localhost:3001/finishedbooks/`,response.data);
+           await axios.delete(`http://localhost:3001/books/${props.id}`)
+          await  axios.post(`http://localhost:3001/finishedbooks/`,response.data);
             
           }
-        });
+        )
+        ;
+       
   }
 
 

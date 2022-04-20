@@ -15,5 +15,6 @@ export const bookCard = () => (
     time="13 minutes read"
     reads="1.9k reads"
     finished={true}
+ 
   />
 );

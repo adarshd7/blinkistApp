@@ -9,12 +9,13 @@ export interface IBookList{
   time: string;
   image: string;
   reads?: string;
-  Finished:boolean
+  finished:boolean;
+  
 }
 
 export interface IBookGridProps {
 
-  bookList: IBookList[]
+  bookList: IBookList[],
 
 }
 
@@ -26,7 +27,7 @@ export default function BookGrid(props: IBookGridProps) {
       {props.bookList.map((book)=>(
          <BookCard key={book.id}
           id={book.id}
-          finished={book.Finished}
+          finished={book.finished}
           title={book.title}
           author={book.author}
           time={book.time}

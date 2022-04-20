@@ -10,7 +10,8 @@ const books:IBookList[] = [
       time: "13-minute read",
       image: "/assets/Images/1.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
+  
     },
     {
       id:2,
@@ -18,7 +19,8 @@ const books:IBookList[] = [
       author: "Steve Glaveski",
       time: "15-minute read",
       image: "/assets/Images/11.png",
-      Finished:false
+      finished:false,
+     
     },
     {
       id:3,
@@ -27,7 +29,7 @@ const books:IBookList[] = [
       time: "13-minute read",
       image: "/assets/Images/3.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
     },
     {
       id:4,
@@ -36,7 +38,7 @@ const books:IBookList[] = [
       time: "12-minute read",
       image: "/assets/Images/4.png",
       reads: "16k reads",
-      Finished:false
+      finished:false
     },
     {
       id:5,
@@ -45,7 +47,7 @@ const books:IBookList[] = [
       time: "13-minute read",
       image: "/assets/Images/5.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
     },
     {
       id:6,
@@ -54,7 +56,7 @@ const books:IBookList[] = [
       time: "13-minute read",
       image: "/assets/Images/6.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
     },
     {
       id:7,
@@ -63,7 +65,7 @@ const books:IBookList[] = [
       time: "15-minute read",
       image: "/assets/Images/7.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
     },
     {
       id:8,
@@ -72,7 +74,7 @@ const books:IBookList[] = [
       time: "13-minute read",
       image: "/assets/Images/8.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
     },
     {
       id:9,
@@ -81,7 +83,7 @@ const books:IBookList[] = [
       time: "12-minute read",
       image: "/assets/Images/9.png",
       reads: "1.9k reads",
-      Finished:false
+      finished:false
     },
 ]
 export {books};

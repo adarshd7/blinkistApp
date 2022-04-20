@@ -9,8 +9,8 @@ const FinishedReadingGrid=()=>{
 useEffect(() => {
     axios.get("http://localhost:3001/finishedbooks").then((res) => {
       setFinishedReadingBooks(res.data);
-    });
-  }, []);
+    },);
+  },[finishedreading]);
   
   return (
     <BookGrid bookList={finishedreading} />

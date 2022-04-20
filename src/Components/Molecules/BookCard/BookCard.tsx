@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -9,10 +9,12 @@ import { Typography } from "@mui/material";
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { ReactComponent as Timer} from "../../../assessts/Timer.svg";
 import Icon from "../../Atoms/Icon/Icon";
-import Buttons from "../../Atoms/Button/Button";
+import AddIcon from '@mui/icons-material/Add';
 import  Finished  from "../Finished/Finished";
 import axios from "axios";
 import  ReadAgain from "../ReadAgain/ReadAgain";
+import {ReactComponent as add} from "../../../assessts/Add.svg"
+
 
 export interface IBookCardProps {
     id:number;
@@ -21,7 +23,8 @@ export interface IBookCardProps {
    author: string;
    time: string;
    reads?: String;
-  finished:boolean
+  finished:boolean;
+
 }
 
 
@@ -89,13 +92,13 @@ const BookCard= (props: IBookCardProps) => {
           height: "20px",
         }}
       >
-      
-       
-          {props.finished ? (
-          <ReadAgain id={props.id}/>
+      {props.finished?(
+          <ReadAgain id={props.id}></ReadAgain>
           ) : (
            <Finished id={props.id}></Finished>
           )}
+       
+        
    
       </CardActions>
       <div>
@@ -203,3 +206,13 @@ const BookCard= (props: IBookCardProps) => {
 // }
 
 //export default BookCard;
+
+{/* //{props.addtolib ? ( <Button variant="text" >
+        
+        //<Typography component='div' sx={{display:"flex",alignItems:"center"}} className={classes.addToLib}><AddIcon/>Add to library</Typography>
+
+    //</Button> ):(props.finished?( */} 
+         {/* // <ReadAgain id={props.id}></ReadAgain>
+          ) : (
+         //  <Finished id={props.id}></Finished>
+         // ))} */}

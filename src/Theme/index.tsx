@@ -267,6 +267,15 @@ width: "214px",
 
 
   },
+  visible: {
+    position:"static",
+    height: "398px",
+    top: "100px",
+    background: "#F1F6F4",
+  },
+  hidden: {
+    display: "none",
+  },
   footertitle:{
     width:"378px",height:"64px",color:"#0365F2",fontsize:"24px",fontweight: "500",lineheight: "32px",textalign:"left"
   }

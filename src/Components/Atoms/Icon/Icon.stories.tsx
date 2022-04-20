@@ -13,8 +13,8 @@ export default {
 
 export const IconStory= () => 
   (//<Demo icon={Ent}/>
-    
-  <Icon icon={Heal}/>
+    <Icon icon={Heal}/>
+  
   
   );
 
