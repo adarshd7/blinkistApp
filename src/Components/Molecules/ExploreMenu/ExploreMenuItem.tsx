@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core";
 export interface IExploreMenuItemProps {
    starticon: ReactNode;
   children: ReactNode;
-  handleChange?: () => void;
+  handleChange: () => void;
 }
 const useStyles = makeStyles({
 
@@ -28,7 +28,7 @@ export default function ExploreMenuItem(props: IExploreMenuItemProps) {
     <Link underline="none">
       <Button
         onClick={() => {
-          
+          props.handleChange()
         }}
         variant="text"
         startIcon={props.starticon}

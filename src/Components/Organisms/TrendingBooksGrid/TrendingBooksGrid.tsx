@@ -4,10 +4,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Typography } from "@mui/material";
 import { customStyles } from "../../../Theme";
+import { useNavigate } from "react-router-dom";
 
 
 const TrendingBooksGrid=()=> {
     const classes=customStyles();
+    const navigate=useNavigate();
     const [trending, setTrendingBooks] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:3001/trending").then((res) => {
@@ -33,7 +35,7 @@ const TrendingBooksGrid=()=> {
       <Typography variant="subtitle1" className={classes.blinks} >
       Trending Blinks
       </Typography>
-      <BookGrid bookList={trending} ></BookGrid>
+      <BookGrid bookList={trending} handleClick={()=>navigate('bookdetails')} ></BookGrid>
       <Typography variant="subtitle1" className={classes.blinks} >
       Just added
       </Typography>

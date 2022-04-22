@@ -114,7 +114,7 @@ const customStyles = makeStyles({
 
   },
   headerLink:{
-    display: "flex", alignItems: "center", color: "#03314B" ,
+    display: "flex", alignItems: "center", color: "#03314B" ,textTransform:"none",
 
   },
   exploretitle: {

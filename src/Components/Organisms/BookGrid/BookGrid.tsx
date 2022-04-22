@@ -10,12 +10,13 @@ export interface IBookList{
   image: string;
   reads?: string;
   finished:boolean;
-  addtolibrary?:boolean
+  addtolibrary?:boolean;
+  handleClick?:()=>void;
   
 }
 
 export interface IBookGridProps {
-
+  handleClick?:()=>void,
   bookList: IBookList[],
   value?:(newVar: number) => void,
 

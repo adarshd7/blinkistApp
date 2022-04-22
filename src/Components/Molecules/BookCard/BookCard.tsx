@@ -14,6 +14,7 @@ import  Finished  from "../../Organisms/Finished/Finished";
 import axios from "axios";
 import  ReadAgain from "../../Organisms/ReadAgain/ReadAgain";
 import {ReactComponent as add} from "../../../assessts/Add.svg"
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 export interface IBookCardProps {
@@ -34,6 +35,8 @@ export interface IBookCardProps {
 const BookCard= (props: IBookCardProps) => {
  
   const classes = customStyles();
+  const navigate = useNavigate();
+  
   return (
     <Card className={classes.CardHead}>
       <CardMedia
@@ -42,6 +45,7 @@ const BookCard= (props: IBookCardProps) => {
         height="292px"
         width="294.1px"
         image={props.image}
+        onClick={()=>navigate('bookdetails')}
       />
       
       <CardContent>

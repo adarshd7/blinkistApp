@@ -47,7 +47,7 @@ const itemList = [
 ];
 
 interface PageChange {
-  handleChange?: () => void;
+  handleChange: () => void;
 }
 
 const ExploreCard = (props: PageChange) => {
