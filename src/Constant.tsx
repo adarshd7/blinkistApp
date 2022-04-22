@@ -10,7 +10,8 @@ const books:IBookList[] = [
       time: "13-minute read",
       image: "/assets/Images/1.png",
       reads: "1.9k reads",
-      finished:false
+      finished:false,
+     
   
     },
     {
@@ -20,6 +21,7 @@ const books:IBookList[] = [
       time: "15-minute read",
       image: "/assets/Images/11.png",
       finished:false,
+      
      
     },
     {

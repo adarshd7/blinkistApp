@@ -9,14 +9,29 @@ interface Templateprops{
 
 const Template=(props:Templateprops) => {
 return(
-    <Grid item container direction="column" >
+    //original
+    // <Grid item container direction="column" sx={{textAlign:'left'}}>
+    //     <Grid item >
+    //         {props.header}
+    //     </Grid>
+    //     <Grid item  >
+    //         {props.content}
+    //     </Grid>
+    //     <Grid item sx={{backgroundColor:"#F1F6F4"}} >
+    //         {props.footer}
+    //     </Grid>
+    // </Grid>
+
+
+    //experiment
+    <Grid item container direction="column" sx={{textAlign:'left'}}>
         <Grid item >
             {props.header}
         </Grid>
-        <Grid item sx={{marginLeft:"400px"}} >
+        <Grid item  sx={{display:'flex', justifyContent:'center'}}>
             {props.content}
         </Grid>
-        <Grid item sx={{backgroundColor:"#F1F6F4"}} >
+        <Grid item sx={{backgroundColor:"#F1F6F4", display:'flex', justifyContent:'center', mt:'60px'}} >
             {props.footer}
         </Grid>
     </Grid>

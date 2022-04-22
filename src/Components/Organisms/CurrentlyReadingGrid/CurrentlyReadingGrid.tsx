@@ -5,17 +5,24 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Typography } from "@mui/material";
 
+
+
 const CurrentlyReadingGrid=()=>{
   const [currentlyreading, setCurrentlyReadingBooks] = useState([]);
+  const [v, setVar] = useState<number>(0);
 useEffect( () => {
   axios.get("http://localhost:3001/books").then((res) => {
       setCurrentlyReadingBooks(res.data);
     });
-  },[currentlyreading]);
-  
+  },[v]);
+  function setval(newVar:number){
+
+     setVar(newVar);
+     console.log(v);
+  }
   return (
     
-    <BookGrid bookList={currentlyreading} />
+    <BookGrid bookList={currentlyreading} value={setval}/>
     
   );
 }

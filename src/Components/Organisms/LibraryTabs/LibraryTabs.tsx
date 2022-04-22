@@ -19,7 +19,7 @@ export default function ToggleTabs() {
   const classes=customStyles();
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ width: '1000px', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} TabIndicatorProps={{style: { background: "#2CE080"}}}>
@@ -27,8 +27,8 @@ export default function ToggleTabs() {
             <Tab label={<Typography sx={{color:value==="2"?"#22C870":"#6D787E",textTransform:"none"}}>Finished</Typography>} value="2" />
           </TabList>
         </Box>
-        <TabPanel value="1"><CurrentlyReadingGrid/></TabPanel>
-        <TabPanel value="2"><FinishedReadingGrid/></TabPanel> 
+        <TabPanel value="1" sx={{padding:'24px 0'}}><CurrentlyReadingGrid/></TabPanel>
+        <TabPanel value="2"sx={{padding:'24px 0'}}><FinishedReadingGrid/></TabPanel> 
       </TabContext>
     </Box>
   );

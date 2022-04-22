@@ -6,14 +6,17 @@ import { useEffect } from "react";
 
 const FinishedReadingGrid=()=>{
   const [finishedreading, setFinishedReadingBooks] = useState([]);
+  const [v, setVar] = useState<number>(0);
 useEffect(() => {
     axios.get("http://localhost:3001/finishedbooks").then((res) => {
       setFinishedReadingBooks(res.data);
     },);
-  },[finishedreading]);
-  
+  },[v]);
+  function setval(newVar:number){
+    setVar(newVar);
+ }
   return (
-    <BookGrid bookList={finishedreading} />
+    <BookGrid bookList={finishedreading} value={setval}/>
   );
 }
 

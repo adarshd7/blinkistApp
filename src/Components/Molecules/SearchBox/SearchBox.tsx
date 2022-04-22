@@ -7,7 +7,7 @@ const useStyles= makeStyles({
   SearchBox: {
     width: "912px",
     marginTop: "50px",
-    marginLeft: "100px",
+    marginBottom: "60px",
     display: "flex",
     alignItems: "center",
     border: "none",

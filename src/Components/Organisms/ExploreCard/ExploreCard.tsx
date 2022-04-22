@@ -62,7 +62,7 @@ const ExploreCard = (props: PageChange) => {
   ));
 
   return (
-    <Box >
+    <Box sx={{width:'1500px'}}>
       <ExploreHeader />
       <Divider sx={{ width: "850px", marginLeft: "454px" }} />
       <Grid

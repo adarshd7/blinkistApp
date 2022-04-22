@@ -93,7 +93,7 @@ const customStyles = makeStyles({
   },
    bannerBox: {
     backgroundColor: "#F1F6F4",
-    marginLeft: "100px",
+    // marginLeft: "100px",
     marginTop: "32px",
     height: "264px",
     width: "912px",
@@ -228,18 +228,31 @@ const customStyles = makeStyles({
     height: "44px",
   },
   addToLib: {
-    background: "#FFF",
-    color: "#0365F2",
-    border: "1px solid #E1ECFC",
-    borderRadius: "0px 0px 8px 8px",
+    height: "20px",
+    width: "103px",
+    
+    fontfamily: "Cera Pro",
+    fontsize: "16px",
+    fontweight: "400",
+    textTransform:"none",
+  
+  },
+  addtoLibrarybtn: {
+    width: "100%",
     textTransform: "none",
-    width: "284px",
+    color: "#0365F2",
     fontWeight: 500,
-    height: "52px",
+    fontSize: "16px",
+    lineHeight: "20.11px",
     "&:hover": {
+      color: "white",
       backgroundColor: "#0365F2",
-      color: "#FFFFFF",
     },
+  },
+
+  blinks:{
+    color:"#03314B",fontWeight: 700,fontfamily: "Cera Pro",fontsize: "24px",fontweight: "700",lineheight: "30px",height: "30px",textAlign:"left"
+
   },
   CardHead: {
     background: "#FFF",
@@ -268,10 +281,13 @@ width: "214px",
 
   },
   visible: {
-    position:"static",
+    
+    position:"absolute",
     height: "398px",
     top: "100px",
     background: "#F1F6F4",
+    zIndex:1,
+    width:"100%"
   },
   hidden: {
     display: "none",

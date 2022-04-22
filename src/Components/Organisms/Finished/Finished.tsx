@@ -1,25 +1,32 @@
 
+import { valueToPercent } from "@mui/base";
 import { Button } from "@mui/material";
 import axios from "axios";
 type propTypes = {
-   id:number
+   id:number,
+  value?:(newVar: number) => void,
 
  }
- 
- const Finished = (props:propTypes) => {
+ let count=0;
+ const Finished = ({id,value}:propTypes) => {
       
  async function addToFinished(){
-      await  axios.get(`http://localhost:3001/books/${props.id}`)
+   
+      await  axios.get(`http://localhost:3001/books/${id}`)
         .then(async response=>{
           
             response.data["finished"]=true;
             console.log(response.data);
-           await axios.delete(`http://localhost:3001/books/${props.id}`)
+           await axios.delete(`http://localhost:3001/books/${id}`)
           await  axios.post(`http://localhost:3001/finishedbooks/`,response.data);
-            
+          
           }
         )
         ;
+  
+        count+=1;
+          value?value(count):console.log(count);
+          
        
   }
 
@@ -44,3 +51,4 @@ type propTypes = {
  
 
 export default Finished;
+

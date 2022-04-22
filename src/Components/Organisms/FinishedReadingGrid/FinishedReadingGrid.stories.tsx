@@ -6,5 +6,7 @@ export default {
 } 
 
 export const finishedReadingGrid = () => (
+
   <FinishedReadingGrid></FinishedReadingGrid>
+  
 );

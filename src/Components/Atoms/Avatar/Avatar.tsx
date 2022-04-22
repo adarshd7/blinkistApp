@@ -9,6 +9,7 @@ const AvatarIcon=()=>{
         background:" #69A6E3"
        
         }}>A</Avatar>
+        
     );
 }
 

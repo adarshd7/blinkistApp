@@ -12,7 +12,7 @@ export default function BookDetailGrid() {
         container
         direction="column"
         spacing={4}
-        sx={{ marginTop: "50px" }}
+        sx={{width:'1000px', marginTop: "50px" }}
        
       >
         

@@ -10,21 +10,23 @@ export interface IBookList{
   image: string;
   reads?: string;
   finished:boolean;
+  addtolibrary?:boolean
   
 }
 
 export interface IBookGridProps {
 
   bookList: IBookList[],
+  value?:(newVar: number) => void,
 
 }
 
-export default function BookGrid(props: IBookGridProps) {
+export default function BookGrid({bookList,value}: IBookGridProps) {
 
     return(
-     <Box>
-      <Box display='flex'  width="1200px" flexDirection='row' flexWrap='wrap' columnGap={5} rowGap={5}>
-      {props.bookList.map((book)=>(
+    //  <Box>
+      <Box display='flex'  width="1000px" flexDirection='row' flexWrap='wrap' columnGap={5} rowGap={5}>
+      {bookList.map((book)=>(
          <BookCard key={book.id}
           id={book.id}
           finished={book.finished}
@@ -33,9 +35,11 @@ export default function BookGrid(props: IBookGridProps) {
           time={book.time}
           image={book.image}
           reads={book.reads}
+          addtolibrary={book.addtolibrary}
+          value={value}
         />))}
       </Box>
-      </Box>
+      // </Box>
     );
     
     }
